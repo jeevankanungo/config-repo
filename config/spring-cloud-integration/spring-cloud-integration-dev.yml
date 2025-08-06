@@ -1,16 +1,16 @@
-spring:
-  application:
-    name: spring-cloud-integration
-  profiles:
-    active: dev
-server:
-  port: 8081
-
-# Application specific properties
+# Development environment configuration
 app:
-  message: "Hello from Spring Cloud Integration Dev!"
+  message: "Development config from GitHub!"
+  environment: "development"
+  debug: true
+
+# Development-specific settings
+features:
+  github-config: true
+  dev-mode: true
+  debug-logging: true
 
 logging:
   level:
     com.example: DEBUG
-    io.getunleash: DEBUG
+    org.springframework.cloud.config: DEBUG

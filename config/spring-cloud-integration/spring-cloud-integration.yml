@@ -1,16 +1,17 @@
-spring:
-  application:
-    name: spring-cloud-integration
-  profiles:
-    active: local
-server:
-  port: 8081
-
-# Application specific properties
+# Default configuration from GitHub
 app:
-  message: "Hello from Spring Cloud Integration local!"
+  message: "Configuration loaded from GitHub!"
+  version: "1.0.0"
+  environment: "default"
 
+# GitHub-managed feature flags
+features:
+  github-config: true
+  centralized-config: true
+  version-controlled: true
+
+# Logging configuration
 logging:
   level:
-    com.example: DEBUG
-    io.getunleash: DEBUG
+    com.example: INFO
+    org.springframework.cloud.config: DEBUG

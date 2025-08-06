@@ -1,16 +1,16 @@
-spring:
-  application:
-    name: spring-cloud-integration
-  profiles:
-    active: prod
-server:
-  port: 8081
-
-# Application specific properties
+# Production environment configuration
 app:
-  message: "Hello from Spring Cloud Integration Prod!"
+  message: "Production config from GitHub!"
+  environment: "production"
+  debug: false
+
+# Production-specific settings  
+features:
+  github-config: true
+  prod-mode: true
+  debug-logging: false
 
 logging:
   level:
-    com.example: DEBUG
-    io.getunleash: DEBUG
+    com.example: WARN
+    org.springframework.cloud.config: WARN
