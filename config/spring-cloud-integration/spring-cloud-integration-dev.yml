@@ -1,16 +1,55 @@
-# Development environment configuration
+# Production Environment Configuration
 app:
-  message: "Development config from GitHub!"
-  environment: "development"
-  debug: true
+  environment: "production"
+  debug: false
+  configSource: "github-prod-profile"
 
-# Development-specific settings
+# Production Feature Flags (conservative)
 features:
-  github-config: true
-  dev-mode: true
-  debug-logging: true
+  # Stable features only
+  advanced-search: true
+  premium-features: true
+  beta-testing: false  # Disable beta in production
+  mobile-app: false    # Not ready for production
+  
+  # Production optimizations
+  performance-monitoring: true
+  error-tracking: true
+  analytics: true
 
+# Production Settings
+settings:
+  pagination:
+    defaultPageSize: 50
+    maxPageSize: 500
+  cache:
+    ttl: 7200  # Longer cache in production
+    maxSize: 5000
+  api:
+    timeout: 15
+    retries: 5
+
+# Production Logging (minimal)
 logging:
   level:
-    com.example: DEBUG
-    org.springframework.cloud.config: DEBUG
+    com.example: WARN
+    org.springframework.cloud.config: WARN
+    org.springframework.security: WARN
+    root: ERROR
+
+# Production Database
+database:
+  connection:
+    maxPoolSize: 50  # Larger pool for production
+    minPoolSize: 10
+  jpa:
+    showSql: false
+    ddlAuto: "none"  # Never modify schema in production
+
+# Production External Services
+external:
+  services:
+    weatherApi:
+      timeout: 3000  # Faster timeout in production
+    newsApi:
+      timeout: 5000
