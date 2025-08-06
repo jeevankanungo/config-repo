@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-cloud-integration
+  profiles:
+    active: prod
+server:
+  port: 8081
+
+# Application specific properties
+app:
+  message: "Hello from Spring Cloud Integration Prod!"
+
+logging:
+  level:
+    com.example: DEBUG
+    io.getunleash: DEBUG
