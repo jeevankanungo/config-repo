@@ -1,8 +1,8 @@
 # Development environment configuration
 app:
-  name: "Spring Cloud Integration"
+  name: "spring-cloud-integration"
   version: "2.0.0-dev"
-  environment: "development"
+  environment: "dev"
   configSource: "github-dev-profile"
   debug: true
 
