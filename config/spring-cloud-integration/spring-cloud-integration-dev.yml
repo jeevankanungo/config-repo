@@ -11,11 +11,7 @@ features:
   github-config: true
   vault-secrets: true
   config-server: true
-  user-management: true
-  advanced-search: true
-  premium-features: true
-  beta-testing: true
-  debug-mode: true
+
 
 # Development settings
 settings:
@@ -23,9 +19,7 @@ settings:
     defaultPageSize: 5
   cache:
     ttl: 60
-  api:
-    timeout: 60
-    retries: 1
+
 
 # Development logging
 logging:

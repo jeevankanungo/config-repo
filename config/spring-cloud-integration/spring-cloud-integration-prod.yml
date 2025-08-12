@@ -11,11 +11,6 @@ features:
   github-config: true
   vault-secrets: true
   config-server: true
-  user-management: true
-  advanced-search: true
-  premium-features: true
-  beta-testing: false
-  performance-monitoring: true
 
 # Production settings
 settings:

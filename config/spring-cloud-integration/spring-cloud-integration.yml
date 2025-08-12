@@ -1,84 +1,8 @@
-# Application Configuration from GitHub
-app:
-  name: "Spring Cloud Integration"
-  version: "2.0.0"
-  description: "Comprehensive integration with GitHub Config + Vault Secrets"
-  environment: "default"
-  configSource: "github-repository"
+# Default configuration from GitHub
 
-# Feature Flags managed in GitHub
-features:
-  # Core features
-  github-config: true
-  vault-secrets: true
-  config-server: true
-  
-  # Application features
-  user-management: true
-  advanced-search: false
-  premium-features: false
-  beta-testing: false
-  
-  # Integration features
-  keycloak-auth: true
-  unleash-flags: true
-  vault-integration: true
-  
-  # UI features
-  dark-mode: true
-  responsive-design: true
-  mobile-app: false
-
-# Application Settings
-settings:
-  pagination:
-    defaultPageSize: 20
-    maxPageSize: 100
-  cache:
-    ttl: 3600
-    maxSize: 1000
-  api:
-    timeout: 30
-    retries: 3
-  ui:
-    theme: "light"
-    language: "en"
-
-# Logging Configuration
+# Logging configuration
 logging:
   level:
     com.example: INFO
     org.springframework.cloud.config: INFO
-    org.springframework.security: INFO
-    io.getunleash: WARN
     root: WARN
-  pattern:
-    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
-
-# Non-sensitive third-party configurations
-external:
-  services:
-    weatherApi:
-      url: "https://api.openweathermap.org/data/2.5"
-      timeout: 5000
-    newsApi:
-      url: "https://newsapi.org/v2"
-      timeout: 10000
-  
-# Email configuration (non-sensitive parts)
-email:
-  smtp:
-    host: "smtp.gmail.com"
-    port: 587
-    protocol: "smtp"
-  from: "noreply@yourcompany.com"
-  
-# Database configuration (non-sensitive parts)
-database:
-  connection:
-    maxPoolSize: 20
-    minPoolSize: 5
-    connectionTimeout: 30000
-  jpa:
-    showSql: false
-    ddlAuto: "validate"
