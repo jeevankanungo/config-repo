@@ -19,3 +19,10 @@ logging:
     org.springframework.cloud.config: DEBUG
     org.springframework.security: DEBUG
     root: INFO
+
+# Development settings
+settings:
+  pagination:
+    defaultPageSize: 5
+  cache:
+    ttl: 60        
