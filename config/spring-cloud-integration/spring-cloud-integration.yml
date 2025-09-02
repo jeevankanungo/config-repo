@@ -6,3 +6,10 @@ logging:
     com.example: INFO
     org.springframework.cloud.config: INFO
     root: WARN
+
+# Development settings
+settings:
+  pagination:
+    defaultPageSize: 5
+  cache:
+    ttl: 60    
