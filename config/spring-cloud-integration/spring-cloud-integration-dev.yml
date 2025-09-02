@@ -12,15 +12,6 @@ features:
   vault-secrets: true
   config-server: true
 
-
-# Development settings
-settings:
-  pagination:
-    defaultPageSize: 5
-  cache:
-    ttl: 60
-
-
 # Development logging
 logging:
   level:
