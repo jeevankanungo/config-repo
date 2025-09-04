@@ -10,6 +10,6 @@ logging:
 # Development settings
 settings:
   pagination:
-    defaultPageSize: 10
+    defaultPageSize: 5
   cache:
     ttl: 60    
